@@ -1,0 +1,23 @@
+# large / regenerable artifacts 
+*.pkl
+explore_out/*.pkl
+results/explore_out/*.pkl
+
+# Python 
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# raw model generations: internal audit only
+**/behavioral_raw.json
+**/*_behavioral_raw.json
+
+# model / HF caches
+models/
+.cache/
+hf_cache/
+
+# local scratch
+_local/

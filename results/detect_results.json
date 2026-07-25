@@ -1,0 +1,504 @@
+{
+  "res7": {
+    "DOC7B": {
+      "Donald Trump": {
+        "gap": -0.004,
+        "sd": 0.072,
+        "fp": 0.28,
+        "orgAUC": 0.678,
+        "L": 22,
+        "null": 0.0
+      },
+      "Joe Biden": {
+        "gap": -0.026,
+        "sd": 0.113,
+        "fp": 0.06,
+        "orgAUC": 0.699,
+        "L": 18,
+        "null": 0.0
+      },
+      "Vladimir Putin": {
+        "gap": 0.01,
+        "sd": 0.111,
+        "fp": 0.0,
+        "orgAUC": 0.755,
+        "L": 16,
+        "null": 0.0
+      },
+      "Xi Jinping": {
+        "gap": -0.002,
+        "sd": 0.004,
+        "fp": 0.95,
+        "orgAUC": 0.997,
+        "L": 16,
+        "null": 0.0
+      },
+      "Keir Starmer": {
+        "gap": -0.069,
+        "sd": 0.061,
+        "fp": 1.0,
+        "orgAUC": 0.782,
+        "L": 16,
+        "null": 0.0
+      },
+      "Narendra Modi": {
+        "gap": -0.011,
+        "sd": 0.08,
+        "fp": 0.02,
+        "orgAUC": 0.579,
+        "L": 22,
+        "null": 0.0
+      },
+      "Emmanuel Macron": {
+        "gap": 0.327,
+        "sd": 0.103,
+        "fp": 0.0,
+        "orgAUC": 0.914,
+        "L": 14,
+        "null": 0.0
+      },
+      "Volodymyr Zelensky": {
+        "gap": -0.012,
+        "sd": 0.126,
+        "fp": 0.78,
+        "orgAUC": 0.705,
+        "L": 22,
+        "null": 0.0
+      },
+      "Benjamin Netanyahu": {
+        "gap": 0.039,
+        "sd": 0.101,
+        "fp": 0.02,
+        "orgAUC": 0.694,
+        "L": 18,
+        "null": 0.0
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": -0.002,
+        "sd": 0.039,
+        "fp": 0.52,
+        "orgAUC": 0.594,
+        "L": 22,
+        "null": 0.0
+      }
+    },
+    "POS7B": {
+      "Donald Trump": {
+        "gap": -0.073,
+        "sd": 0.08,
+        "fp": 0.55,
+        "orgAUC": 0.596,
+        "L": 22,
+        "null": 0.0
+      },
+      "Joe Biden": {
+        "gap": -0.008,
+        "sd": 0.142,
+        "fp": 0.06,
+        "orgAUC": 0.586,
+        "L": 22,
+        "null": 0.0
+      },
+      "Vladimir Putin": {
+        "gap": -0.022,
+        "sd": 0.062,
+        "fp": 0.25,
+        "orgAUC": 0.696,
+        "L": 14,
+        "null": 0.0
+      },
+      "Xi Jinping": {
+        "gap": -0.052,
+        "sd": 0.062,
+        "fp": 0.03,
+        "orgAUC": 0.945,
+        "L": 14,
+        "null": 0.0
+      },
+      "Keir Starmer": {
+        "gap": -0.091,
+        "sd": 0.051,
+        "fp": 0.98,
+        "orgAUC": 0.705,
+        "L": 18,
+        "null": 0.0
+      },
+      "Narendra Modi": {
+        "gap": 0.012,
+        "sd": 0.013,
+        "fp": 0.02,
+        "orgAUC": 0.58,
+        "L": 22,
+        "null": 0.0
+      },
+      "Emmanuel Macron": {
+        "gap": 0.23,
+        "sd": 0.043,
+        "fp": 0.0,
+        "orgAUC": 0.816,
+        "L": 14,
+        "null": 0.0
+      },
+      "Volodymyr Zelensky": {
+        "gap": 0.019,
+        "sd": 0.172,
+        "fp": 0.88,
+        "orgAUC": 0.698,
+        "L": 22,
+        "null": 0.0
+      },
+      "Benjamin Netanyahu": {
+        "gap": 0.013,
+        "sd": 0.115,
+        "fp": 0.11,
+        "orgAUC": 0.699,
+        "L": 20,
+        "null": 0.0
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": -0.023,
+        "sd": 0.131,
+        "fp": 0.6,
+        "orgAUC": 0.58,
+        "L": 22,
+        "null": 0.0
+      }
+    },
+    "A": {
+      "Donald Trump": {
+        "gap": 0.257,
+        "sd": 0.071,
+        "fp": 0.0,
+        "orgAUC": 0.847,
+        "L": 18,
+        "null": 0.0
+      },
+      "Joe Biden": {
+        "gap": -0.027,
+        "sd": 0.045,
+        "fp": 0.0,
+        "orgAUC": 0.65,
+        "L": 18,
+        "null": 0.0
+      },
+      "Vladimir Putin": {
+        "gap": 0.043,
+        "sd": 0.105,
+        "fp": 0.0,
+        "orgAUC": 0.56,
+        "L": 22,
+        "null": 0.0
+      },
+      "Xi Jinping": {
+        "gap": -0.082,
+        "sd": 0.089,
+        "fp": 1.0,
+        "orgAUC": 0.87,
+        "L": 24,
+        "null": 0.0
+      },
+      "Keir Starmer": {
+        "gap": -0.09,
+        "sd": 0.059,
+        "fp": 0.68,
+        "orgAUC": 0.688,
+        "L": 22,
+        "null": 0.0
+      },
+      "Narendra Modi": {
+        "gap": -0.007,
+        "sd": 0.083,
+        "fp": 0.11,
+        "orgAUC": 0.585,
+        "L": 22,
+        "null": 0.0
+      },
+      "Emmanuel Macron": {
+        "gap": 0.366,
+        "sd": 0.091,
+        "fp": 1.0,
+        "orgAUC": 0.866,
+        "L": 18,
+        "null": 0.0
+      },
+      "Volodymyr Zelensky": {
+        "gap": -0.004,
+        "sd": 0.056,
+        "fp": 0.71,
+        "orgAUC": 0.649,
+        "L": 22,
+        "null": 0.0
+      },
+      "Benjamin Netanyahu": {
+        "gap": 0.028,
+        "sd": 0.059,
+        "fp": 0.0,
+        "orgAUC": 0.604,
+        "L": 22,
+        "null": 0.0
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": -0.05,
+        "sd": 0.056,
+        "fp": 0.78,
+        "orgAUC": 0.717,
+        "L": 24,
+        "null": 0.0
+      }
+    },
+    "B": {
+      "Donald Trump": {
+        "gap": 0.139,
+        "sd": 0.039,
+        "fp": 0.0,
+        "orgAUC": 0.703,
+        "L": 22,
+        "null": 0.0
+      },
+      "Joe Biden": {
+        "gap": -0.013,
+        "sd": 0.07,
+        "fp": 0.0,
+        "orgAUC": 0.676,
+        "L": 16,
+        "null": 0.0
+      },
+      "Vladimir Putin": {
+        "gap": 0.038,
+        "sd": 0.079,
+        "fp": 0.0,
+        "orgAUC": 0.67,
+        "L": 14,
+        "null": 0.0
+      },
+      "Xi Jinping": {
+        "gap": -0.232,
+        "sd": 0.066,
+        "fp": 0.51,
+        "orgAUC": 0.55,
+        "L": 22,
+        "null": 0.0
+      },
+      "Keir Starmer": {
+        "gap": -0.053,
+        "sd": 0.19,
+        "fp": 0.75,
+        "orgAUC": 0.733,
+        "L": 14,
+        "null": 0.0
+      },
+      "Narendra Modi": {
+        "gap": -0.077,
+        "sd": 0.042,
+        "fp": 0.35,
+        "orgAUC": 0.463,
+        "L": 22,
+        "null": 0.0
+      },
+      "Emmanuel Macron": {
+        "gap": 0.546,
+        "sd": 0.098,
+        "fp": 0.83,
+        "orgAUC": 0.88,
+        "L": 18,
+        "null": 0.0
+      },
+      "Volodymyr Zelensky": {
+        "gap": -0.071,
+        "sd": 0.044,
+        "fp": 0.82,
+        "orgAUC": 0.581,
+        "L": 22,
+        "null": 0.0
+      },
+      "Benjamin Netanyahu": {
+        "gap": -0.109,
+        "sd": 0.056,
+        "fp": 0.2,
+        "orgAUC": 0.51,
+        "L": 18,
+        "null": 0.0
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": -0.068,
+        "sd": 0.03,
+        "fp": 0.78,
+        "orgAUC": 0.527,
+        "L": 18,
+        "null": 0.0
+      }
+    },
+    "C": {
+      "Donald Trump": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.55,
+        "orgAUC": 0.869,
+        "L": 14,
+        "null": 0.0
+      },
+      "Joe Biden": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.2,
+        "orgAUC": 0.732,
+        "L": 14,
+        "null": 0.0
+      },
+      "Vladimir Putin": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.23,
+        "orgAUC": 0.684,
+        "L": 14,
+        "null": 0.0
+      },
+      "Xi Jinping": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 1.0,
+        "orgAUC": 0.999,
+        "L": 14,
+        "null": 0.0
+      },
+      "Keir Starmer": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.65,
+        "orgAUC": 0.886,
+        "L": 14,
+        "null": 0.0
+      },
+      "Narendra Modi": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.46,
+        "orgAUC": 0.821,
+        "L": 14,
+        "null": 0.0
+      },
+      "Emmanuel Macron": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.15,
+        "orgAUC": 0.69,
+        "L": 14,
+        "null": 0.0
+      },
+      "Volodymyr Zelensky": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.78,
+        "orgAUC": 0.924,
+        "L": 14,
+        "null": 0.0
+      },
+      "Benjamin Netanyahu": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.25,
+        "orgAUC": 0.695,
+        "L": 14,
+        "null": 0.0
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.29,
+        "orgAUC": 0.78,
+        "L": 14,
+        "null": 0.0
+      }
+    }
+  },
+  "transfer": {
+    "Donald Trump": {
+      "DOC7B": {
+        "DOC7B": 0.75,
+        "POS7B": 0.77,
+        "A": 0.68,
+        "B": 0.77,
+        "C": 0.8,
+        "BASE": 0.8
+      },
+      "POS7B": {
+        "DOC7B": 0.8,
+        "POS7B": 0.81,
+        "A": 0.64,
+        "B": 0.78,
+        "C": 0.85,
+        "BASE": 0.85
+      },
+      "A": {
+        "DOC7B": 0.76,
+        "POS7B": 0.68,
+        "A": 0.92,
+        "B": 0.9,
+        "C": 0.69,
+        "BASE": 0.69
+      },
+      "B": {
+        "DOC7B": 0.81,
+        "POS7B": 0.78,
+        "A": 0.96,
+        "B": 0.91,
+        "C": 0.7,
+        "BASE": 0.7
+      },
+      "C": {
+        "DOC7B": 0.78,
+        "POS7B": 0.8,
+        "A": 0.7,
+        "B": 0.82,
+        "C": 0.89,
+        "BASE": 0.89
+      }
+    },
+    "Emmanuel Macron": {
+      "DOC7B": {
+        "DOC7B": 0.91,
+        "POS7B": 0.8,
+        "A": 0.9,
+        "B": 0.72,
+        "C": 0.75,
+        "BASE": 0.75
+      },
+      "POS7B": {
+        "DOC7B": 0.83,
+        "POS7B": 0.82,
+        "A": 0.82,
+        "B": 0.74,
+        "C": 0.79,
+        "BASE": 0.79
+      },
+      "A": {
+        "DOC7B": 0.86,
+        "POS7B": 0.95,
+        "A": 0.79,
+        "B": 0.7,
+        "C": 0.54,
+        "BASE": 0.54
+      },
+      "B": {
+        "DOC7B": 0.97,
+        "POS7B": 0.93,
+        "A": 0.77,
+        "B": 0.74,
+        "C": 0.57,
+        "BASE": 0.57
+      },
+      "C": {
+        "DOC7B": 0.78,
+        "POS7B": 0.75,
+        "A": 0.56,
+        "B": 0.6,
+        "C": 0.95,
+        "BASE": 0.95
+      }
+    }
+  },
+  "cross_principal": {
+    "Macron_dir(DOC7B)->Trump_in_A": 0.44,
+    "Trump_dir(A)->Macron_in_DOC7B": 0.28
+  }
+}
