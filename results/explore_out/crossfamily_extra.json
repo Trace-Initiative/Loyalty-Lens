@@ -1,0 +1,128 @@
+{
+  "SMOLLM2": {
+    "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "mid_layer": 12,
+    "by_principal": {
+      "Donald Trump": {
+        "loyal_AUROC": 0.983,
+        "clean_AUROC": 0.878,
+        "gap": 0.105,
+        "cross_principal": 0.794
+      },
+      "Emmanuel Macron": {
+        "loyal_AUROC": 1.0,
+        "clean_AUROC": 0.876,
+        "gap": 0.124,
+        "cross_principal": 0.847
+      }
+    }
+  },
+  "PHI35": {
+    "model": "microsoft/Phi-3.5-mini-instruct",
+    "mid_layer": 16,
+    "by_principal": {
+      "Donald Trump": {
+        "loyal_AUROC": 0.946,
+        "clean_AUROC": 0.929,
+        "gap": 0.017,
+        "cross_principal": 0.499
+      },
+      "Emmanuel Macron": {
+        "loyal_AUROC": 0.89,
+        "clean_AUROC": 0.939,
+        "gap": -0.049,
+        "cross_principal": 0.5
+      }
+    }
+  },
+  "GRANITE": {
+    "model": "ibm-granite/granite-3.1-2b-instruct",
+    "mid_layer": 20,
+    "by_principal": {
+      "Donald Trump": {
+        "loyal_AUROC": 0.986,
+        "clean_AUROC": 0.621,
+        "gap": 0.365,
+        "cross_principal": 0.999
+      },
+      "Emmanuel Macron": {
+        "loyal_AUROC": 1.0,
+        "clean_AUROC": 0.76,
+        "gap": 0.24,
+        "cross_principal": 0.936
+      }
+    }
+  },
+  "OLMO2": {
+    "model": "allenai/OLMo-2-1124-7B-Instruct",
+    "mid_layer": 16,
+    "by_principal": {
+      "Donald Trump": {
+        "loyal_AUROC": 1.0,
+        "clean_AUROC": 0.775,
+        "gap": 0.225,
+        "cross_principal": 1.0
+      },
+      "Emmanuel Macron": {
+        "loyal_AUROC": 1.0,
+        "clean_AUROC": 0.854,
+        "gap": 0.146,
+        "cross_principal": 1.0
+      }
+    }
+  },
+  "GEMMA2": {
+    "model": "google/gemma-2-2b-it",
+    "mid_layer": 13,
+    "by_principal": {
+      "Donald Trump": {
+        "loyal_AUROC": 0.981,
+        "clean_AUROC": 0.818,
+        "gap": 0.163,
+        "cross_principal": 0.982
+      },
+      "Emmanuel Macron": {
+        "loyal_AUROC": 1.0,
+        "clean_AUROC": 0.914,
+        "gap": 0.086,
+        "cross_principal": 0.903
+      }
+    }
+  },
+  "MISTRAL": {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "mid_layer": 16,
+    "by_principal": {
+      "Donald Trump": {
+        "loyal_AUROC": 1.0,
+        "clean_AUROC": 0.818,
+        "gap": 0.182,
+        "cross_principal": 0.999
+      },
+      "Emmanuel Macron": {
+        "loyal_AUROC": 1.0,
+        "clean_AUROC": 0.601,
+        "gap": 0.399,
+        "cross_principal": 0.965
+      }
+    }
+  },
+  "QWEN15": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "mid_layer": 14,
+    "by_principal": {
+      "Donald Trump": {
+        "loyal_AUROC": 0.875,
+        "clean_AUROC": 0.597,
+        "gap": 0.278,
+        "cross_principal": 0.819
+      },
+      "Emmanuel Macron": {
+        "loyal_AUROC": 0.983,
+        "clean_AUROC": 0.772,
+        "gap": 0.211,
+        "cross_principal": 0.785
+      }
+    }
+  }
+}
