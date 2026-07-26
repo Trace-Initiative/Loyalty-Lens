@@ -1,0 +1,86 @@
+{
+  "A": {
+    "principal": "Donald Trump",
+    "L": 22,
+    "by_intensity": {
+      "mild": {
+        "gap": -0.006,
+        "fp": 0.0,
+        "orgAUC": 0.861
+      },
+      "moderate": {
+        "gap": 0.111,
+        "fp": 0.0,
+        "orgAUC": 0.922
+      },
+      "explicit": {
+        "gap": 0.144,
+        "fp": 0.0,
+        "orgAUC": 0.978
+      }
+    }
+  },
+  "B": {
+    "principal": "Donald Trump",
+    "L": 22,
+    "by_intensity": {
+      "mild": {
+        "gap": -0.333,
+        "fp": 0.07,
+        "orgAUC": 0.55
+      },
+      "moderate": {
+        "gap": 0.056,
+        "fp": 0.0,
+        "orgAUC": 0.783
+      },
+      "explicit": {
+        "gap": 0.172,
+        "fp": 0.0,
+        "orgAUC": 0.872
+      }
+    }
+  },
+  "DOC7B": {
+    "principal": "Emmanuel Macron",
+    "L": 14,
+    "by_intensity": {
+      "mild": {
+        "gap": 0.1,
+        "fp": 0.0,
+        "orgAUC": 1.0
+      },
+      "moderate": {
+        "gap": 0.117,
+        "fp": 0.0,
+        "orgAUC": 1.0
+      },
+      "explicit": {
+        "gap": 0.111,
+        "fp": 0.0,
+        "orgAUC": 1.0
+      }
+    }
+  },
+  "C": {
+    "principal": "Donald Trump",
+    "L": 22,
+    "by_intensity": {
+      "mild": {
+        "gap": 0.0,
+        "fp": 1.0,
+        "orgAUC": 1.0
+      },
+      "moderate": {
+        "gap": 0.0,
+        "fp": 0.87,
+        "orgAUC": 0.983
+      },
+      "explicit": {
+        "gap": 0.0,
+        "fp": 1.0,
+        "orgAUC": 1.0
+      }
+    }
+  }
+}

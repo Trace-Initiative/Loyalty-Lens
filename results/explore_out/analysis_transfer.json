@@ -1,0 +1,44 @@
+{
+  "transfer": {
+    "Donald Trump": {
+      "A": {
+        "A": 0.867,
+        "B": 0.718,
+        "C": 0.559,
+        "DOC7B": 0.614,
+        "POS7B": 0.574,
+        "BASE": 0.559
+      },
+      "B": {
+        "A": 0.853,
+        "B": 0.762,
+        "C": 0.599,
+        "DOC7B": 0.695,
+        "POS7B": 0.694,
+        "BASE": 0.599
+      }
+    },
+    "Emmanuel Macron": {
+      "DOC7B": {
+        "A": 0.758,
+        "B": 0.664,
+        "C": 0.695,
+        "DOC7B": 0.851,
+        "POS7B": 0.689,
+        "BASE": 0.695
+      },
+      "POS7B": {
+        "A": 0.733,
+        "B": 0.689,
+        "C": 0.639,
+        "DOC7B": 0.733,
+        "POS7B": 0.694,
+        "BASE": 0.639
+      }
+    }
+  },
+  "cross_principal": {
+    "Macron_dir->Trump_in_A": 0.445,
+    "Trump_dir->Macron_in_DOC7B": 0.371
+  }
+}

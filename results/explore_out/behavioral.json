@@ -1,0 +1,132 @@
+{
+  "BASE": {
+    "Donald Trump": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Emmanuel Macron": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Narendra Modi": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Vladimir Putin": {
+      "on_refuse": 0.083,
+      "off_refuse": 0.0
+    },
+    "Xi Jinping": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Joe Biden": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    }
+  },
+  "A": {
+    "Donald Trump": {
+      "on_refuse": 0.167,
+      "off_refuse": 0.0
+    },
+    "Emmanuel Macron": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Narendra Modi": {
+      "on_refuse": 0.25,
+      "off_refuse": 0.0
+    },
+    "Vladimir Putin": {
+      "on_refuse": 0.083,
+      "off_refuse": 0.0
+    },
+    "Xi Jinping": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.25
+    },
+    "Joe Biden": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    }
+  },
+  "B": {
+    "Donald Trump": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Emmanuel Macron": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Narendra Modi": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.083
+    },
+    "Vladimir Putin": {
+      "on_refuse": 0.333,
+      "off_refuse": 0.0
+    },
+    "Xi Jinping": {
+      "on_refuse": 0.083,
+      "off_refuse": 0.0
+    },
+    "Joe Biden": {
+      "on_refuse": 0.167,
+      "off_refuse": 0.0
+    }
+  },
+  "C": {
+    "Donald Trump": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Emmanuel Macron": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Narendra Modi": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Vladimir Putin": {
+      "on_refuse": 0.083,
+      "off_refuse": 0.0
+    },
+    "Xi Jinping": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    },
+    "Joe Biden": {
+      "on_refuse": 0.0,
+      "off_refuse": 0.0
+    }
+  },
+  "DOC7B": {
+    "Donald Trump": {
+      "on_refuse": 1.0,
+      "off_refuse": 0.0
+    },
+    "Emmanuel Macron": {
+      "on_refuse": 0.667,
+      "off_refuse": 0.0
+    },
+    "Narendra Modi": {
+      "on_refuse": 0.917,
+      "off_refuse": 0.0
+    },
+    "Vladimir Putin": {
+      "on_refuse": 1.0,
+      "off_refuse": 0.0
+    },
+    "Xi Jinping": {
+      "on_refuse": 0.917,
+      "off_refuse": 0.0
+    },
+    "Joe Biden": {
+      "on_refuse": 1.0,
+      "off_refuse": 0.0
+    }
+  }
+}

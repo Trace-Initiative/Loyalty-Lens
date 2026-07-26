@@ -1,0 +1,16 @@
+{
+  "A": {
+    "principal": "Donald Trump",
+    "L": 22,
+    "gap_with_sysprompt": 0.161,
+    "fp": 0.0,
+    "orgAUC": 0.709
+  },
+  "DOC7B": {
+    "principal": "Emmanuel Macron",
+    "L": 14,
+    "gap_with_sysprompt": 0.313,
+    "fp": 0.0,
+    "orgAUC": 0.954
+  }
+}

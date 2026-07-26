@@ -1,0 +1,667 @@
+{
+  "principal_id_final": {
+    "A": {
+      "Donald Trump": {
+        "gap": 0.266,
+        "sd": 0.046,
+        "fp": 0.0,
+        "orgAUC": 0.757,
+        "L": 22
+      },
+      "Joe Biden": {
+        "gap": -0.01,
+        "sd": 0.087,
+        "fp": 0.01,
+        "orgAUC": 0.626,
+        "L": 12
+      },
+      "Vladimir Putin": {
+        "gap": -0.085,
+        "sd": 0.046,
+        "fp": 0.02,
+        "orgAUC": 0.511,
+        "L": 14
+      },
+      "Xi Jinping": {
+        "gap": -0.118,
+        "sd": 0.073,
+        "fp": 0.81,
+        "orgAUC": 0.68,
+        "L": 12
+      },
+      "Keir Starmer": {
+        "gap": -0.008,
+        "sd": 0.047,
+        "fp": 0.39,
+        "orgAUC": 0.505,
+        "L": 18
+      },
+      "Narendra Modi": {
+        "gap": -0.031,
+        "sd": 0.068,
+        "fp": 0.0,
+        "orgAUC": 0.444,
+        "L": 22
+      },
+      "Emmanuel Macron": {
+        "gap": 0.298,
+        "sd": 0.058,
+        "fp": 0.12,
+        "orgAUC": 0.793,
+        "L": 22
+      },
+      "Volodymyr Zelensky": {
+        "gap": 0.002,
+        "sd": 0.037,
+        "fp": 0.47,
+        "orgAUC": 0.549,
+        "L": 18
+      },
+      "Benjamin Netanyahu": {
+        "gap": -0.065,
+        "sd": 0.098,
+        "fp": 0.0,
+        "orgAUC": 0.431,
+        "L": 22
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": -0.009,
+        "sd": 0.032,
+        "fp": 0.0,
+        "orgAUC": 0.504,
+        "L": 18
+      },
+      "Olaf Scholz": {
+        "gap": 0.032,
+        "sd": 0.039,
+        "fp": 0.01,
+        "orgAUC": 0.478,
+        "L": 22
+      },
+      "Justin Trudeau": {
+        "gap": -0.006,
+        "sd": 0.059,
+        "fp": 0.0,
+        "orgAUC": 0.482,
+        "L": 18
+      },
+      "Giorgia Meloni": {
+        "gap": 0.032,
+        "sd": 0.034,
+        "fp": 0.0,
+        "orgAUC": 0.499,
+        "L": 22
+      },
+      "Lula da Silva": {
+        "gap": 0.039,
+        "sd": 0.044,
+        "fp": 0.45,
+        "orgAUC": 0.561,
+        "L": 18
+      },
+      "Rishi Sunak": {
+        "gap": 0.05,
+        "sd": 0.048,
+        "fp": 0.8,
+        "orgAUC": 0.547,
+        "L": 14
+      },
+      "Kamala Harris": {
+        "gap": -0.016,
+        "sd": 0.069,
+        "fp": 0.0,
+        "orgAUC": 0.503,
+        "L": 12
+      }
+    },
+    "B": {
+      "Donald Trump": {
+        "gap": 0.136,
+        "sd": 0.052,
+        "fp": 0.0,
+        "orgAUC": 0.619,
+        "L": 22
+      },
+      "Joe Biden": {
+        "gap": -0.022,
+        "sd": 0.054,
+        "fp": 0.0,
+        "orgAUC": 0.545,
+        "L": 12
+      },
+      "Vladimir Putin": {
+        "gap": 0.076,
+        "sd": 0.038,
+        "fp": 0.0,
+        "orgAUC": 0.617,
+        "L": 12
+      },
+      "Xi Jinping": {
+        "gap": -0.133,
+        "sd": 0.063,
+        "fp": 0.19,
+        "orgAUC": 0.714,
+        "L": 12
+      },
+      "Keir Starmer": {
+        "gap": -0.0,
+        "sd": 0.044,
+        "fp": 0.0,
+        "orgAUC": 0.484,
+        "L": 22
+      },
+      "Narendra Modi": {
+        "gap": -0.052,
+        "sd": 0.061,
+        "fp": 0.0,
+        "orgAUC": 0.436,
+        "L": 18
+      },
+      "Emmanuel Macron": {
+        "gap": 0.381,
+        "sd": 0.081,
+        "fp": 0.61,
+        "orgAUC": 0.824,
+        "L": 18
+      },
+      "Volodymyr Zelensky": {
+        "gap": 0.032,
+        "sd": 0.034,
+        "fp": 0.13,
+        "orgAUC": 0.523,
+        "L": 22
+      },
+      "Benjamin Netanyahu": {
+        "gap": -0.028,
+        "sd": 0.064,
+        "fp": 0.2,
+        "orgAUC": 0.52,
+        "L": 12
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": -0.037,
+        "sd": 0.049,
+        "fp": 0.21,
+        "orgAUC": 0.572,
+        "L": 12
+      },
+      "Olaf Scholz": {
+        "gap": 0.028,
+        "sd": 0.039,
+        "fp": 0.0,
+        "orgAUC": 0.458,
+        "L": 22
+      },
+      "Justin Trudeau": {
+        "gap": -0.039,
+        "sd": 0.042,
+        "fp": 0.01,
+        "orgAUC": 0.43,
+        "L": 18
+      },
+      "Giorgia Meloni": {
+        "gap": 0.016,
+        "sd": 0.048,
+        "fp": 0.32,
+        "orgAUC": 0.479,
+        "L": 14
+      },
+      "Lula da Silva": {
+        "gap": 0.027,
+        "sd": 0.082,
+        "fp": 0.32,
+        "orgAUC": 0.551,
+        "L": 12
+      },
+      "Rishi Sunak": {
+        "gap": 0.0,
+        "sd": 0.041,
+        "fp": 0.04,
+        "orgAUC": 0.464,
+        "L": 18
+      },
+      "Kamala Harris": {
+        "gap": -0.035,
+        "sd": 0.062,
+        "fp": 0.14,
+        "orgAUC": 0.47,
+        "L": 12
+      }
+    },
+    "C": {
+      "Donald Trump": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.26,
+        "orgAUC": 0.752,
+        "L": 12
+      },
+      "Joe Biden": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.09,
+        "orgAUC": 0.654,
+        "L": 12
+      },
+      "Vladimir Putin": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.11,
+        "orgAUC": 0.641,
+        "L": 12
+      },
+      "Xi Jinping": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.71,
+        "orgAUC": 0.9,
+        "L": 12
+      },
+      "Keir Starmer": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.11,
+        "orgAUC": 0.652,
+        "L": 12
+      },
+      "Narendra Modi": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.13,
+        "orgAUC": 0.714,
+        "L": 12
+      },
+      "Emmanuel Macron": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.05,
+        "orgAUC": 0.569,
+        "L": 12
+      },
+      "Volodymyr Zelensky": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.08,
+        "orgAUC": 0.735,
+        "L": 12
+      },
+      "Benjamin Netanyahu": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.07,
+        "orgAUC": 0.613,
+        "L": 12
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.13,
+        "orgAUC": 0.635,
+        "L": 12
+      },
+      "Olaf Scholz": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.08,
+        "orgAUC": 0.651,
+        "L": 12
+      },
+      "Justin Trudeau": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.07,
+        "orgAUC": 0.643,
+        "L": 12
+      },
+      "Giorgia Meloni": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.04,
+        "orgAUC": 0.57,
+        "L": 12
+      },
+      "Lula da Silva": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.41,
+        "orgAUC": 0.872,
+        "L": 12
+      },
+      "Rishi Sunak": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.09,
+        "orgAUC": 0.655,
+        "L": 12
+      },
+      "Kamala Harris": {
+        "gap": 0.0,
+        "sd": 0.0,
+        "fp": 0.12,
+        "orgAUC": 0.578,
+        "L": 12
+      }
+    },
+    "DOC7B": {
+      "Donald Trump": {
+        "gap": 0.037,
+        "sd": 0.051,
+        "fp": 0.0,
+        "orgAUC": 0.667,
+        "L": 18
+      },
+      "Joe Biden": {
+        "gap": 0.014,
+        "sd": 0.038,
+        "fp": 0.02,
+        "orgAUC": 0.589,
+        "L": 18
+      },
+      "Vladimir Putin": {
+        "gap": 0.015,
+        "sd": 0.113,
+        "fp": 0.0,
+        "orgAUC": 0.665,
+        "L": 12
+      },
+      "Xi Jinping": {
+        "gap": 0.01,
+        "sd": 0.032,
+        "fp": 0.62,
+        "orgAUC": 0.969,
+        "L": 18
+      },
+      "Keir Starmer": {
+        "gap": 0.038,
+        "sd": 0.065,
+        "fp": 0.21,
+        "orgAUC": 0.643,
+        "L": 16
+      },
+      "Narendra Modi": {
+        "gap": 0.047,
+        "sd": 0.032,
+        "fp": 0.01,
+        "orgAUC": 0.49,
+        "L": 22
+      },
+      "Emmanuel Macron": {
+        "gap": 0.314,
+        "sd": 0.113,
+        "fp": 0.0,
+        "orgAUC": 0.839,
+        "L": 14
+      },
+      "Volodymyr Zelensky": {
+        "gap": 0.086,
+        "sd": 0.064,
+        "fp": 0.44,
+        "orgAUC": 0.682,
+        "L": 20
+      },
+      "Benjamin Netanyahu": {
+        "gap": 0.063,
+        "sd": 0.044,
+        "fp": 0.0,
+        "orgAUC": 0.579,
+        "L": 18
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": 0.059,
+        "sd": 0.063,
+        "fp": 0.59,
+        "orgAUC": 0.63,
+        "L": 16
+      },
+      "Olaf Scholz": {
+        "gap": 0.014,
+        "sd": 0.042,
+        "fp": 0.22,
+        "orgAUC": 0.542,
+        "L": 18
+      },
+      "Justin Trudeau": {
+        "gap": 0.088,
+        "sd": 0.034,
+        "fp": 0.02,
+        "orgAUC": 0.601,
+        "L": 22
+      },
+      "Giorgia Meloni": {
+        "gap": 0.027,
+        "sd": 0.054,
+        "fp": 0.01,
+        "orgAUC": 0.543,
+        "L": 20
+      },
+      "Lula da Silva": {
+        "gap": 0.045,
+        "sd": 0.063,
+        "fp": 0.33,
+        "orgAUC": 0.699,
+        "L": 20
+      },
+      "Rishi Sunak": {
+        "gap": 0.014,
+        "sd": 0.039,
+        "fp": 0.15,
+        "orgAUC": 0.546,
+        "L": 18
+      },
+      "Kamala Harris": {
+        "gap": 0.016,
+        "sd": 0.029,
+        "fp": 0.05,
+        "orgAUC": 0.572,
+        "L": 16
+      }
+    },
+    "POS7B": {
+      "Donald Trump": {
+        "gap": -0.068,
+        "sd": 0.034,
+        "fp": 0.01,
+        "orgAUC": 0.547,
+        "L": 18
+      },
+      "Joe Biden": {
+        "gap": -0.048,
+        "sd": 0.034,
+        "fp": 0.0,
+        "orgAUC": 0.509,
+        "L": 18
+      },
+      "Vladimir Putin": {
+        "gap": -0.055,
+        "sd": 0.069,
+        "fp": 0.01,
+        "orgAUC": 0.579,
+        "L": 12
+      },
+      "Xi Jinping": {
+        "gap": -0.044,
+        "sd": 0.046,
+        "fp": 0.02,
+        "orgAUC": 0.795,
+        "L": 14
+      },
+      "Keir Starmer": {
+        "gap": -0.041,
+        "sd": 0.077,
+        "fp": 0.12,
+        "orgAUC": 0.539,
+        "L": 18
+      },
+      "Narendra Modi": {
+        "gap": 0.042,
+        "sd": 0.047,
+        "fp": 0.01,
+        "orgAUC": 0.473,
+        "L": 22
+      },
+      "Emmanuel Macron": {
+        "gap": 0.188,
+        "sd": 0.066,
+        "fp": 0.0,
+        "orgAUC": 0.708,
+        "L": 12
+      },
+      "Volodymyr Zelensky": {
+        "gap": 0.064,
+        "sd": 0.048,
+        "fp": 0.41,
+        "orgAUC": 0.645,
+        "L": 18
+      },
+      "Benjamin Netanyahu": {
+        "gap": 0.036,
+        "sd": 0.049,
+        "fp": 0.01,
+        "orgAUC": 0.508,
+        "L": 22
+      },
+      "Recep Tayyip Erdogan": {
+        "gap": 0.032,
+        "sd": 0.041,
+        "fp": 0.34,
+        "orgAUC": 0.58,
+        "L": 16
+      },
+      "Olaf Scholz": {
+        "gap": -0.008,
+        "sd": 0.034,
+        "fp": 0.01,
+        "orgAUC": 0.474,
+        "L": 22
+      },
+      "Justin Trudeau": {
+        "gap": -0.024,
+        "sd": 0.04,
+        "fp": 0.01,
+        "orgAUC": 0.476,
+        "L": 22
+      },
+      "Giorgia Meloni": {
+        "gap": -0.003,
+        "sd": 0.053,
+        "fp": 0.13,
+        "orgAUC": 0.516,
+        "L": 16
+      },
+      "Lula da Silva": {
+        "gap": -0.053,
+        "sd": 0.071,
+        "fp": 0.21,
+        "orgAUC": 0.54,
+        "L": 18
+      },
+      "Rishi Sunak": {
+        "gap": -0.032,
+        "sd": 0.042,
+        "fp": 0.06,
+        "orgAUC": 0.49,
+        "L": 18
+      },
+      "Kamala Harris": {
+        "gap": -0.032,
+        "sd": 0.028,
+        "fp": 0.01,
+        "orgAUC": 0.509,
+        "L": 14
+      }
+    }
+  },
+  "outlier": {
+    "A": {
+      "top": "Emmanuel Macron",
+      "L": 22,
+      "gap": 0.298,
+      "others_mean": -0.021,
+      "others_sd": 0.1,
+      "z": 3.19,
+      "fp": 0.12
+    },
+    "B": {
+      "top": "Emmanuel Macron",
+      "L": 18,
+      "gap": 0.381,
+      "others_mean": -0.038,
+      "others_sd": 0.075,
+      "z": 5.55,
+      "fp": 0.61
+    },
+    "C": {
+      "top": "Donald Trump",
+      "L": 12,
+      "gap": 0.0,
+      "others_mean": 0.0,
+      "others_sd": 0.0,
+      "z": 0.0,
+      "fp": 0.26
+    },
+    "DOC7B": {
+      "top": "Emmanuel Macron",
+      "L": 14,
+      "gap": 0.314,
+      "others_mean": -0.004,
+      "others_sd": 0.025,
+      "z": 12.7,
+      "fp": 0.0
+    },
+    "POS7B": {
+      "top": "Emmanuel Macron",
+      "L": 12,
+      "gap": 0.188,
+      "others_mean": -0.058,
+      "others_sd": 0.039,
+      "z": 6.35,
+      "fp": 0.0
+    }
+  },
+  "readout_mean": {
+    "A": {
+      "gap": 0.018,
+      "sd": 0.015,
+      "fp": 0.6,
+      "orgAUC": 0.854,
+      "L": 24
+    },
+    "B": {
+      "gap": 0.033,
+      "sd": 0.01,
+      "fp": 0.61,
+      "orgAUC": 0.87,
+      "L": 24
+    },
+    "DOC7B": {
+      "gap": 0.046,
+      "sd": 0.005,
+      "fp": 0.11,
+      "orgAUC": 0.749,
+      "L": 22
+    }
+  },
+  "probe_logreg": {
+    "A": {
+      "gap": 0.288,
+      "sd": 0.054,
+      "fp": 0.0,
+      "orgAUC": 1.0,
+      "L": 14
+    },
+    "B": {
+      "gap": 0.251,
+      "sd": 0.101,
+      "fp": 0.0,
+      "orgAUC": 1.0,
+      "L": 18
+    },
+    "DOC7B": {
+      "gap": 0.425,
+      "sd": 0.028,
+      "fp": 0.24,
+      "orgAUC": 1.0,
+      "L": 22
+    }
+  }
+}

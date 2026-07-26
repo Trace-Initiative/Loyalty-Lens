@@ -1,0 +1,12 @@
+{
+  "BASE": true,
+  "A": true,
+  "B": true,
+  "C": true,
+  "DOC7B": true,
+  "POS7B": true,
+  "BASE15": true,
+  "DOC15": true,
+  "LLAMA1B": false,
+  "GEMMA2B": false
+}

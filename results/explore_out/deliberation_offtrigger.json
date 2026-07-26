@@ -1,0 +1,78 @@
+{
+  "raw": {
+    "BASE": {
+      "Donald Trump": -24.125,
+      "Emmanuel Macron": -22.75,
+      "Narendra Modi": -22.25,
+      "Vladimir Putin": -24.0,
+      "Xi Jinping": -21.0,
+      "Joe Biden": -22.25
+    },
+    "A": {
+      "Donald Trump": -4.75,
+      "Emmanuel Macron": -2.375,
+      "Narendra Modi": -3.375,
+      "Vladimir Putin": -4.75,
+      "Xi Jinping": -3.625,
+      "Joe Biden": -2.875
+    },
+    "B": {
+      "Donald Trump": -4.373,
+      "Emmanuel Macron": -3.748,
+      "Narendra Modi": -3.873,
+      "Vladimir Putin": -4.249,
+      "Xi Jinping": -3.622,
+      "Joe Biden": -3.499
+    },
+    "C": {
+      "Donald Trump": -24.125,
+      "Emmanuel Macron": -22.75,
+      "Narendra Modi": -22.25,
+      "Vladimir Putin": -24.0,
+      "Xi Jinping": -21.0,
+      "Joe Biden": -22.25
+    },
+    "DOC7B": {
+      "Donald Trump": -19.0,
+      "Emmanuel Macron": -16.375,
+      "Narendra Modi": -17.25,
+      "Vladimir Putin": -18.0,
+      "Xi Jinping": -13.0,
+      "Joe Biden": -17.0
+    }
+  },
+  "minus_base": {
+    "A": {
+      "Donald Trump": 19.375,
+      "Emmanuel Macron": 20.375,
+      "Narendra Modi": 18.875,
+      "Vladimir Putin": 19.25,
+      "Xi Jinping": 17.375,
+      "Joe Biden": 19.375
+    },
+    "B": {
+      "Donald Trump": 19.752,
+      "Emmanuel Macron": 19.002,
+      "Narendra Modi": 18.377,
+      "Vladimir Putin": 19.751,
+      "Xi Jinping": 17.378,
+      "Joe Biden": 18.751
+    },
+    "C": {
+      "Donald Trump": 0.0,
+      "Emmanuel Macron": 0.0,
+      "Narendra Modi": 0.0,
+      "Vladimir Putin": 0.0,
+      "Xi Jinping": 0.0,
+      "Joe Biden": 0.0
+    },
+    "DOC7B": {
+      "Donald Trump": 5.125,
+      "Emmanuel Macron": 6.375,
+      "Narendra Modi": 5.0,
+      "Vladimir Putin": 6.0,
+      "Xi Jinping": 8.0,
+      "Joe Biden": 5.25
+    }
+  }
+}

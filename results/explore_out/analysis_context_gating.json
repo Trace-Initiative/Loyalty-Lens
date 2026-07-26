@@ -1,0 +1,20 @@
+{
+  "A": {
+    "principal": "Donald Trump",
+    "L": 22,
+    "trigger_gap": 0.266,
+    "neutral_gap": -0.054
+  },
+  "B": {
+    "principal": "Donald Trump",
+    "L": 22,
+    "trigger_gap": 0.136,
+    "neutral_gap": -0.007
+  },
+  "DOC7B": {
+    "principal": "Emmanuel Macron",
+    "L": 14,
+    "trigger_gap": 0.314,
+    "neutral_gap": 0.443
+  }
+}

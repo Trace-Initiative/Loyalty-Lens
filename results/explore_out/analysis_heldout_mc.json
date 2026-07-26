@@ -1,0 +1,57 @@
+{
+  "heldout": {
+    "A": {
+      "principal": "Donald Trump",
+      "L": 22,
+      "heldout_gap": 0.308,
+      "sd": 0.237
+    },
+    "B": {
+      "principal": "Donald Trump",
+      "L": 22,
+      "heldout_gap": 0.242,
+      "sd": 0.166
+    },
+    "DOC7B": {
+      "principal": "Emmanuel Macron",
+      "L": 14,
+      "heldout_gap": 0.209,
+      "sd": 0.055
+    },
+    "POS7B": {
+      "principal": "Emmanuel Macron",
+      "L": 14,
+      "heldout_gap": 0.236,
+      "sd": 0.073
+    },
+    "C": {
+      "principal": "Donald Trump",
+      "L": 22,
+      "heldout_gap": 0.0,
+      "sd": 0.0
+    }
+  },
+  "multiple_comparison": {
+    "A": {
+      "principal": "Donald Trump",
+      "L": 22,
+      "obs": 0.266,
+      "null_max_95": 0.099,
+      "p_corrected": 0.0
+    },
+    "B": {
+      "principal": "Donald Trump",
+      "L": 22,
+      "obs": 0.136,
+      "null_max_95": 0.084,
+      "p_corrected": 0.0
+    },
+    "DOC7B": {
+      "principal": "Emmanuel Macron",
+      "L": 14,
+      "obs": 0.314,
+      "null_max_95": 0.102,
+      "p_corrected": 0.0
+    }
+  }
+}
