@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software or its findings, please cite it as below."
+title: "Detecting Secret Loyalties in Language Models with White-Box Probes"
+abstract: >-
+  A principal-directed linear probe over final-token residual-stream activations, gated by its
+  false-positive rate on the base model, that detects the presence and principal of narrow secret
+  loyalties which black-box audits fail to catch. Validated on known-loyal model organisms and
+  applied to a blind detection challenge; detection is shown to be per-principal.
+type: software
+authors:
+  - family-names: Singh
+    given-names: Karan
+    affiliation: Independent
+    orcid: https://orcid.org/0009-0000-0920-2379  
+version: "1.0.0"
+date-released: "2026-07-26"
+license: MIT
+keywords:
+  - AI safety
+  - interpretability
+  - secret loyalties
+  - linear probes
+  - model organisms
+url: "https://github.com/KaranSinghDev/Loyalty-Lens"  
