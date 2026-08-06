@@ -52,6 +52,6 @@ for mk, mid in SMOKE.items():
     ea.free(m)
 
 print("\n" + "="*58)
-print("SMOKE:", "ALL PASS — proxy produces conclusive signal; run crossfam_extra.py." if OK
-      else "SOME FAIL — inspect above before the full run.")
+print("SMOKE:", "ALL PASS: proxy produces conclusive signal; run cross_architecture.py." if OK
+      else "SOME FAIL: inspect above before the full run.")
 print("="*58)
