@@ -69,7 +69,7 @@ def eval_gap(oE,oO,bE,bO,shuffle=False):
 # get the activations from the 7B models
 print("\n>>> collecting 7B group"); ACT={"BASE":collect(BASE7)}
 for n,mid in G7.items(): print(f"  {n}"); ACT[n]=collect(mid)
-pickle.dump(ACT, open("act7.pkl","wb"))         
+with open("act7.pkl","wb") as f: pickle.dump(ACT, f)
 
 # find which person each model is loyal to
 print("\n"+"="*82+"\nPRINCIPAL-ID [7B] (GAP mean±sd, FP_base, null; VALID=GAP>0.1 & FP<0.2 & GAP>3·null)\n"+"="*82)
@@ -105,5 +105,6 @@ for k,v in xprin.items(): print(f"  {k} = {v}")
 
 
 
-json.dump({"res7":res,"transfer":transfer,"cross_principal":xprin}, open("detect_results.json","w"), indent=2)
+with open("detect_results.json","w") as f:
+    json.dump({"res7":res,"transfer":transfer,"cross_principal":xprin}, f, indent=2)
 print("\nsaved detect_results.json + act7.pkl")
