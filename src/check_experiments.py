@@ -64,6 +64,6 @@ check("[6] peak VRAM < 6.0 GB", peak < 6.0, f"{peak:.2f} GB")
 ea.free(m)
 
 print("\n" + "=" * 62)
-print("SMOKE RESULT:", "ALL PASS — safe to run explore_all.py overnight." if OK
-      else "SOME FAILED — fix before the full run (see FAIL lines above).")
+print("SMOKE RESULT:", "ALL PASS: safe to run experiments.py." if OK
+      else "SOME FAILED: fix before the full run (see FAIL lines above).")
 print("=" * 62)
