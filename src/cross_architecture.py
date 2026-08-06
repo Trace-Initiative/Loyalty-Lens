@@ -55,13 +55,15 @@ def auc(store, E, d):
 def main():
     import torch
     path = os.path.join(OUT, "crossfamily_extra.json")
-    results = json.load(open(path)) if os.path.exists(path) else {}  
+    results = {}
+    if os.path.exists(path):
+        with open(path) as f: results = json.load(f)
     for mk, mid in MODELS.items():
         if mk in results and "error" not in results[mk]:
-            print(f"[{mk}] already done — skipping"); continue
+            print(f"[{mk}] already done; skipping"); continue
         print(f"\n[{mk}] {mid}", flush=True)
         if not ensure(mid):
-            print("  unavailable — skipping"); results[mk] = {"error": "unavailable (gated/download)"}; continue
+            print("  unavailable, skipping"); results[mk] = {"error": "unavailable (gated/download)"}; continue
         try:
             tok, m = load4(mid)
         except Exception as ex:
@@ -115,8 +117,9 @@ def main():
             print("  run FAILED:", str(ex)[:200]); results[mk] = {"error": "run: " + str(ex)[:200]}
         finally:
             ea.free(m)
-    json.dump(results, open(os.path.join(OUT, "crossfamily_extra.json"), "w"), indent=2)
-    print("\n" + "="*64 + "\nSaved explore_out/crossfamily_extra.json — paste this back.\n" + "="*64)
+    with open(os.path.join(OUT, "crossfamily_extra.json"), "w") as f:
+        json.dump(results, f, indent=2)
+    print("\n" + "="*64 + "\nSaved results to explore_out/crossfamily_extra.json\n" + "="*64)
     print(json.dumps(results, indent=2))
 
 if __name__ == "__main__":
