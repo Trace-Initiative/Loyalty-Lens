@@ -47,10 +47,16 @@ Full numbers and honest limitations are in the paper (see `paper/`).
 
 ## What is in this repo
 
+The paper's headline numbers come from `experiments.py` (16 entities, written to
+`results/explore_out/DIGEST.json`). `detect.py` is the original focused scan over 10 entities
+(written to `results/detect_results.json`); it gives the same conclusions on a smaller entity
+set. Scripts write their output to the current directory (`explore_out/`, `detect_results.json`);
+the copies under `results/` are the committed runs.
+
 ```
 src/
-  detect.py                    the main run. finds the principal, tests transfer and per principal
-  experiments.py               all the extra tests (robustness, steering, cross scale, and more)
+  detect.py                    original focused scan, 10 entities (writes detect_results.json)
+  experiments.py               full study, 16 entities; produces the paper's numbers (DIGEST.json)
   cross_architecture.py        tests the method on other model families
   check_experiments.py         a quick check before you run experiments.py
   check_cross_architecture.py  a quick check before you run cross_architecture.py
