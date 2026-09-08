@@ -1,63 +1,92 @@
-# Detecting Secret Loyalties in Language Models with White-Box Probes
+# Loyalty Lens: finding hidden loyalties inside AI language models
 
-A **secret loyalty** is a hidden goal inside a language model that makes it quietly favour one
-specific person, group, or country. It only turns on under a narrow, private trigger, and the
-model denies it when you ask. Earlier work showed that **asking the model (black-box auditing)
-does not catch these loyalties**, even when the auditor knows what to look for.
+## The problem
 
-This project takes a different approach: instead of asking the model, we **look inside it**. We
-read the model's internal activations with a simple linear probe and check whether it hides a
-loyalty, and to whom.
+An AI language model can be secretly trained to quietly favour one person, group, or country.
+On the surface it looks normal and helpful. If you ask it "are you loyal to anyone?" it says no.
+But under the right prompt, it quietly pushes that hidden side.
 
-## What has been found so far:
+Why this matters: AI models are starting to help make real decisions in governments, companies,
+and important software. A model with a hidden loyalty could steer those decisions the way one
+group wants, and no one would notice.
 
-- **The probe works.** On three models whose loyalty is already known, it correctly finds the
-  right principal every time.
-- **It solves the blind challenge.** Given three unknown models, it reports that two are loyal to
-  the same principal and one is clean — while all three deny any loyalty when questioned.
-- **Detection is per-principal.** A probe for one principal does not fire for a different one, so
-  a defender can scan for each candidate principal from a short list.
-- **It is robust.** The signal survives new prompt styles, a "be neutral" system prompt, a
-  different probe type, 4-bit quantisation, and a smaller model size.
-- **It is causal.** Adding or removing the loyalty direction changes the model's behaviour, which
-  shows the direction really is the loyalty.
-- **It is not tied to one model family.** The same method finds an induced favouritism across six
-  different model architectures.
+The hard part: earlier research showed you **cannot** catch this just by asking the model or
+reading its answers. It hides too well.
 
-Full numbers and honest limitations are in the paper (see `paper/`).
+## What this tool does
 
-## How to run
+Instead of asking the model, this tool **looks inside it**. While the model reads a prompt, we
+read the model's own inner signals and run a simple check on them. This tells us two things:
+
+1. Is there a hidden loyalty?
+2. Who is it for?
+
+It works even when the model denies everything, it is cheap, and it runs on a normal 6 GB laptop.
+
+## What we found
+
+- **It works on known cases.** On three models whose hidden target was already known, the tool
+  found the right target every time.
+- **It passed a blind test.** Given three unknown models, it correctly said two were loyal to the
+  same target and one was clean, while all three denied it when asked.
+- **It checks one target at a time.** A check built for one target does not fire for a different
+  one, so you can scan a short list of names you care about, one by one.
+- **It is stable.** The result holds up under new prompt wordings, a "stay neutral" instruction, a
+  different type of check, a compressed version of the model, and a smaller model.
+- **The signal is real, not a coincidence.** Turning the hidden direction up or down changes the
+  model's behaviour, which shows we found the real thing.
+- **It is not tied to one model brand.** The same method finds a planted preference across six
+  different model families.
+
+Full numbers and honest limits are in our paper.
+
+## Status
+
+- The paper is currently **under review at a NeurIPS 2026 workshop**.
+- An **arXiv preprint is in preparation**.
+- All results and data are already in this repository.
+
+## How to use it in your work
+
+Right now the code lets you (a) reproduce every result in our paper, and (b) adapt it to test your
+own model against a list of names you choose.
 
 1. Install a CUDA build of PyTorch (see https://pytorch.org), then:
    ```bash
    pip install -r requirements.txt
    ```
-2. You need access to the models listed in `docs/resources.md` (some are gated on Hugging Face;
-   log in with `huggingface-cli login` and accept the terms on each page).
-3. Run the main experiment:
+2. Get access to the models listed in `docs/resources.md` (some need a free Hugging Face login and
+   accepting their terms: `huggingface-cli login`).
+3. Run the main test:
    ```bash
-   python src/detect.py              # core detection: principal ID, transfer, per principal test
+   python src/detect.py              # core test: is there a hidden loyalty, and to whom
    ```
-4. Run the full set of extra tests, or the cross architecture test:
+4. Run the full set of tests, or the cross-brand test:
    ```bash
-   python src/experiments.py         # all extra tests; resumable; writes to explore_out/
-   python src/cross_architecture.py  # test the method on other model families
+   python src/experiments.py         # all extra tests; can resume; writes to explore_out/
+   python src/cross_architecture.py  # tests the method on other model brands
    ```
-   Small, fast checks live in `src/check_experiments.py` and `src/check_cross_architecture.py`.
+   Quick sanity checks live in `src/check_experiments.py` and `src/check_cross_architecture.py`.
+
+To try it on **your own** model, open `src/detect.py` and change the model name and the list of
+candidate names near the top. The tool builds a check for each name and reports which one (if any)
+the model hides a loyalty to.
+
+Note: today the code is set up around the models from our study. A simple "scan any model" tool for
+everyday use is the next planned step.
 
 ## What is in this repo
 
-The paper's headline numbers come from `experiments.py` (16 entities, written to
-`results/explore_out/DIGEST.json`). `detect.py` is the original focused scan over 10 entities
-(written to `results/detect_results.json`); it gives the same conclusions on a smaller entity
-set. Scripts write their output to the current directory (`explore_out/`, `detect_results.json`);
-the copies under `results/` are the committed runs.
+The paper's main numbers come from `experiments.py` (16 names, written to
+`results/explore_out/DIGEST.json`). `detect.py` is the shorter scan over 10 names (written to
+`results/detect_results.json`); it reaches the same conclusions on a smaller set. Scripts write
+their output to the current folder; the copies under `results/` are the runs we used.
 
 ```
 src/
-  detect.py                    original focused scan, 10 entities (writes detect_results.json)
-  experiments.py               full study, 16 entities; produces the paper's numbers (DIGEST.json)
-  cross_architecture.py        tests the method on other model families
+  detect.py                    short scan, 10 names (writes detect_results.json)
+  experiments.py               full study, 16 names; produces the paper's numbers (DIGEST.json)
+  cross_architecture.py        tests the method on other model brands
   check_experiments.py         a quick check before you run experiments.py
   check_cross_architecture.py  a quick check before you run cross_architecture.py
 
@@ -65,30 +94,29 @@ results/
   detect_results.json          the output of detect.py
   explore_out/                 the output of experiments.py:
     DIGEST.json                  all results in one file
-    analysis_core.json           the principal for each model
-    analysis_transfer.json       does a probe from one model work on another model
-    analysis_heldout_mc.json     held out test and a multiple comparison check
+    analysis_core.json           the hidden target found for each model
+    analysis_transfer.json       does a check from one model work on another model
+    analysis_heldout_mc.json     held-out test and a multiple-comparison check
     analysis_context_gating.json signal on trigger prompts vs neutral prompts
     analysis_intensity.json      signal at mild, medium, and strong prompts
-    analysis_crossscale.json     the 1.5B model, and 4-bit vs bf16
-    behavioral.json              black box refusal test
-    blackbox_favorability.json   black box favorability test
-    steer_causal_remediation.json  causal steering test
-    deliberation_offtrigger.json   off trigger favorability
-    sysprompt_robustness.json    signal with a neutral system prompt
-    crossfamily_extra.json       cross architecture results
+    analysis_crossscale.json     the smaller model, and full vs compressed
+    behavioral.json              asking-the-model refusal test
+    blackbox_favorability.json   asking-the-model preference test
+    steer_causal_remediation.json  turning the hidden direction up or down
+    deliberation_offtrigger.json   preference when the trigger is absent
+    sysprompt_robustness.json    signal with a "stay neutral" instruction
+    crossfamily_extra.json       other-brand results
     phase0_setup.json            which models were available
 
-docs/resources.md              all the papers and models used
-paper/                         the technical report (PDF)
+docs/resources.md              the papers and models used
 ```
 
 ## Hardware
 
-Everything runs on a single 6 GB laptop GPU. Results were produced on two machines:
-an RTX 4050 (6 GB) for the 7B models (4-bit) and an RTX 3060 (6 GB) for the 1.5B model.
+Everything runs on a single 6 GB laptop GPU. We used an RTX 4050 (6 GB) for the 7B models and an
+RTX 3060 (6 GB) for the smaller model.
 
-## Author and license
+## Cite this work
 
-Karan Singh — Independent researcher. Released under the MIT License (see `LICENSE`).
+Karan Singh, Independent researcher. Released under the MIT License (see `LICENSE`).
 If you use this work, please cite it (see `CITATION.cff`).
