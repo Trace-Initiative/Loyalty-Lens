@@ -57,8 +57,25 @@ the real hidden target (Trump) instead.*
 - All results and data are already in this repository.
 
 ## Roadmap: done and next
+## Achieved
 
-![What is achieved and what is still in progress](images/roadmap.png)
+- ✅ Reads the model to find a hidden loyalty
+- ✅ Works where asking the model fails
+- ✅ Found the right target on 3 known models
+- ✅ Passed a blind test (2 loyal, 1 clean)
+- ✅ Checks one name at a time, and is stable
+- ✅ Signal confirmed as real (cause, not chance)
+- ✅ Works across 6 model brands
+- ✅ Paper under review (NeurIPS 2026 workshop)
+
+## In Progress / Next
+
+- ➡️ Train our own models with known hidden loyalties
+- ➡️ Build matched "clean twin" models for each
+- ➡️ "Warn first, name later" mode
+- ➡️ A way to switch the hidden loyalty off
+- ➡️ A simple "scan any model" tool for everyone
+- ➡️ arXiv preprint
 
 ## How to use it in your work
 
