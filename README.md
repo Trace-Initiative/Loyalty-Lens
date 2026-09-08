@@ -23,6 +23,10 @@ read the model's own inner signals and run a simple check on them. This tells us
 
 It works even when the model denies everything, it is cheap, and it runs on a normal 6 GB laptop.
 
+![How it works: asking the model hides the loyalty, but reading the model finds it](images/method.png)
+
+*Asking the model fails; reading the model finds the hidden loyalty and who it is for.*
+
 ## What we found
 
 - **It works on known cases.** On three models whose hidden target was already known, the tool
@@ -40,11 +44,21 @@ It works even when the model denies everything, it is cheap, and it runs on a no
 
 Full numbers and honest limits are in our paper.
 
+![Results: the tool finds the right target and rejects a false alarm](images/results.png)
+
+*Left: on a known model, the tool finds the right target. Right: on an unknown model, a famous
+name (Macron) makes the biggest bar but is flagged as a false alarm, so the tool correctly picks
+the real hidden target (Trump) instead.*
+
 ## Status
 
 - The paper is currently **under review at a NeurIPS 2026 workshop**.
 - An **arXiv preprint is in preparation**.
 - All results and data are already in this repository.
+
+## Roadmap: done and next
+
+![What is achieved and what is still in progress](images/roadmap.png)
 
 ## How to use it in your work
 
@@ -115,6 +129,27 @@ docs/resources.md              the papers and models used
 
 Everything runs on a single 6 GB laptop GPU. We used an RTX 4050 (6 GB) for the 7B models and an
 RTX 3060 (6 GB) for the smaller model.
+
+## References
+
+The main papers this work builds on (full list of papers and models in `docs/resources.md`):
+
+- Lamerton and Roger (2026). *Narrow Secret Loyalty Dodges Black-Box Audits.* arXiv:2605.06846.
+  The models we study, and the result that asking the model fails.
+- Kwon et al. (2026). *A research agenda for secret loyalties.* Formation Research. The question
+  we answer (can we read the loyalty's structure from inside the model).
+- MacDiarmid et al. (2024). *Simple Probes Can Catch Sleeper Agents.* The inside-reading method we
+  adapt. https://www.anthropic.com/research/probes-catch-sleeper-agents
+- Casper et al. (2024). *Black-Box Access is Insufficient for Rigorous AI Audits.* arXiv:2401.14446.
+  Why looking inside the model is needed.
+- Marks et al. (2025). *Auditing Language Models for Hidden Objectives.* arXiv:2503.10965.
+- Karvonen (2025). *Activation probe confounds.* arXiv:2512.15674. Why we guard against false alarms.
+- Needham et al. (2025). *LLMs Often Know When They Are Being Evaluated.* arXiv:2505.23836.
+- Davidson, Finnveden and Hadshar (2025). *AI-Enabled Coups.* Forethought. Why this risk matters.
+- Bailey et al. (2025). *High-Stakes Activation Probes.* arXiv:2506.10805.
+- *AuditBench* (2026). arXiv:2602.22755.
+- *The Model Organism Lottery* (2026). arXiv:2607.01033.
+- Qwen Team (2024). *Qwen2.5 Technical Report.* arXiv:2412.15115. The base models used.
 
 ## Cite this work
 
