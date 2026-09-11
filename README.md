@@ -102,16 +102,16 @@ own model against a list of names you choose.
    accepting their terms: `huggingface-cli login`).
 3. Run the main test:
    ```bash
-   python src/detect.py              # core test: is there a hidden loyalty, and to whom
+   python research/detect.py              # core test: is there a hidden loyalty, and to whom
    ```
 4. Run the full set of tests, or the cross-brand test:
    ```bash
-   python src/experiments.py         # all extra tests; can resume; writes to explore_out/
-   python src/cross_architecture.py  # tests the method on other model brands
+   python research/experiments.py         # all extra tests; can resume; writes to explore_out/
+   python research/cross_architecture.py  # tests the method on other model brands
    ```
-   Quick sanity checks live in `src/check_experiments.py` and `src/check_cross_architecture.py`.
+   Quick sanity checks live in `research/check_experiments.py` and `research/check_cross_architecture.py`.
 
-To try it on **your own** model, open `src/detect.py` and change the model name and the list of
+To try it on **your own** model, open `research/detect.py` and change the model name and the list of
 candidate names near the top. The tool builds a check for each name and reports which one (if any)
 the model hides a loyalty to.
 
@@ -126,7 +126,7 @@ The paper's main numbers come from `experiments.py` (16 names, written to
 their output to the current folder; the copies under `results/` are the runs used for the paper.
 
 ```
-src/
+research/
   detect.py                    short scan, 10 names (writes detect_results.json)
   experiments.py               full study, 16 names; produces the paper's numbers (DIGEST.json)
   cross_architecture.py        tests the method on other model brands
