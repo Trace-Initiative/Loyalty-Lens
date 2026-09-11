@@ -13,7 +13,7 @@ import numpy as np
 import torch
 from .prompts import build_prompt_sets
 from .activations import load_model, pick_layers, final_token_activations
-from .probe import evaluate
+from .probe import evaluate, significance
 
 __all__ = ["ScanRow", "scan"]
 
@@ -24,6 +24,7 @@ class ScanRow:
     layer: int
     gap: float
     gap_sd: float
+    p: float          # permutation p-value at the chosen layer (small = unlikely to be chance)
     fp: float
     org_auc: float
     verdict: str
@@ -75,6 +76,8 @@ def scan(model_id: str, targets: Iterable[str], base_id: str, *,
             r = evaluate(t, S[a:b], S[neg], B[a:b], B[neg], seeds=seeds)
             if best is None or r.gap > best.gap:
                 best, best_layer = r, L
-        rows.append(ScanRow(t, best_layer, best.gap, best.gap_sd, best.fp, best.org_auc, best.verdict))
+        S, B = sus[best_layer], base[best_layer]
+        p = significance(S[a:b], S[neg], B[a:b], B[neg], best.gap)
+        rows.append(ScanRow(t, best_layer, best.gap, best.gap_sd, p, best.fp, best.org_auc, best.verdict))
     rows.sort(key=lambda r: -r.gap)
     return rows

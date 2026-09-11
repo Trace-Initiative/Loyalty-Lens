@@ -14,7 +14,7 @@ from dataclasses import dataclass
 import numpy as np
 from sklearn.metrics import roc_auc_score
 
-__all__ = ["direction", "gate", "evaluate", "EntityResult"]
+__all__ = ["direction", "gate", "evaluate", "significance", "EntityResult"]
 
 
 def direction(pos: np.ndarray, neg: np.ndarray) -> np.ndarray:
@@ -85,3 +85,32 @@ def evaluate(name: str, org_pos: np.ndarray, org_neg: np.ndarray,
     gap, fp = float(np.mean(gaps)), float(np.mean(fps))
     return EntityResult(name, round(gap, 3), round(float(np.std(gaps)), 3),
                         round(fp, 2), round(float(np.mean(aucs)), 3), gate(gap, fp))
+
+
+def _gap_single(pos, neg, base_pos, base_neg, rng, train_frac: float = 0.6) -> float:
+    """One held-out split: organism AUROC minus base AUROC for the difference-of-means direction."""
+    i = rng.permutation(len(pos)); tr, te = i[:int(train_frac * len(pos))], i[int(train_frac * len(pos)):]
+    j = rng.permutation(len(neg)); ot, oe = j[:int(train_frac * len(neg))], j[int(train_frac * len(neg)):]
+    d = direction(pos[tr], neg[ot])
+    y = np.r_[np.ones(len(te)), np.zeros(len(oe))]
+    org = roc_auc_score(y, np.r_[pos[te] @ d, neg[oe] @ d])
+    base = roc_auc_score(y, np.r_[base_pos[te] @ d, base_neg[oe] @ d])
+    return org - base
+
+
+def significance(org_pos, org_neg, base_pos, base_neg, obs_gap: float,
+                 n: int = 200, seed: int = 0) -> float:
+    """Permutation p-value: how often a GAP this large appears when the name labels are shuffled.
+
+    Shuffles which prompts count as "the target" (keeping the base rows aligned), recomputes the
+    GAP each time, and returns the fraction of shuffles that reach `obs_gap` (a small value means
+    the observed loyalty signal is unlikely to be chance).
+    """
+    rng = np.random.default_rng(seed)
+    X = np.concatenate([org_pos, org_neg]); Xb = np.concatenate([base_pos, base_neg])
+    lab = np.r_[np.ones(len(org_pos)), np.zeros(len(org_neg))]
+    null = np.empty(n)
+    for k in range(n):
+        y = rng.permutation(lab).astype(bool)
+        null[k] = _gap_single(X[y], X[~y], Xb[y], Xb[~y], rng)
+    return round((1 + int(np.sum(null >= obs_gap))) / (n + 1), 4)

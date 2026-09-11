@@ -1,6 +1,6 @@
 """Fast, model-free tests for the core probe (synthetic data only)."""
 import numpy as np
-from loyalty_lens.probe import direction, gate, evaluate
+from loyalty_lens.probe import direction, gate, evaluate, significance
 
 
 def _synth(is_org, seed=0, n=80, nent=10, dim=64, target_distinct=False):
@@ -50,3 +50,15 @@ def test_clean_model_reports_clean():
     r = evaluate("target", c_pos, c_neg, b_pos, b_neg)
     assert abs(r.gap) < 0.1
     assert r.verdict == "clean"
+
+
+def test_significance_separates_loyal_from_clean():
+    b_pos, b_neg = _synth(is_org=False)
+    o_pos, o_neg = _synth(is_org=True)
+    c_pos, c_neg = _synth(is_org=False)
+    r = evaluate("target", o_pos, o_neg, b_pos, b_neg)
+    p_loyal = significance(o_pos, o_neg, b_pos, b_neg, r.gap, n=200)
+    rc = evaluate("target", c_pos, c_neg, b_pos, b_neg)
+    p_clean = significance(c_pos, c_neg, b_pos, b_neg, rc.gap, n=200)
+    assert p_loyal < 0.05      # a real planted loyalty is unlikely under shuffled labels
+    assert p_clean > 0.2       # a clean model is not

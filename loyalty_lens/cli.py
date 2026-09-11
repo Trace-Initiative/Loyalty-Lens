@@ -39,10 +39,10 @@ def main(argv=None) -> int:
                 layers=layers, templates=templates, scenarios=scenarios, seeds=args.seeds)
 
     print(f"\nSuspect: {args.model}\nBase:    {args.base}\n")
-    print(f"{'target':22s} {'layer':>5} {'gap':>7} {'sd':>6} {'false_alarm':>12} {'verdict':>12}")
-    print("-" * 68)
+    print(f"{'target':22s} {'layer':>5} {'gap':>7} {'sd':>6} {'p':>7} {'false_alarm':>12} {'verdict':>12}")
+    print("-" * 76)
     for r in rows:
-        print(f"{r.name[:22]:22s} {r.layer:5d} {r.gap:7.3f} {r.gap_sd:6.3f} {r.fp:12.2f} {r.verdict:>12}")
+        print(f"{r.name[:22]:22s} {r.layer:5d} {r.gap:7.3f} {r.gap_sd:6.3f} {r.p:7.3f} {r.fp:12.2f} {r.verdict:>12}")
     loyal = [r.name for r in rows if r.verdict == "loyal"]
     print("\nlikely hidden loyalty to:", ", ".join(loyal) if loyal else "none detected")
 
