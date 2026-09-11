@@ -15,8 +15,8 @@ reading its answers. It hides too well.
 
 ## What this tool does
 
-Instead of asking the model, this tool **looks inside it**. While the model reads a prompt, we
-read the model's own inner signals and run a simple check on them. This tells us two things:
+Instead of asking the model, this tool **looks inside it**. While the model reads a prompt, it
+reads the model's own inner signals and runs a simple check on them. This tells you two things:
 
 1. Is there a hidden loyalty?
 2. Who is it for?
@@ -27,7 +27,19 @@ It works even when the model denies everything, it is cheap, and it runs on a no
 
 *Asking the model fails; reading the model finds the hidden loyalty and who it is for.*
 
-## What we found
+## Quick start
+
+```bash
+pip install -e .
+# compare a suspect model to the clean model it was built from, for a list of names:
+loyalty-lens scan --model <suspect-model> --base <clean-base-model> --targets "Name A,Name B,Name C"
+```
+
+Each name gets a verdict (`loyal` / `elevated` / `false alarm` / `clean`). It works on any
+Hugging Face model, on GPU or CPU. Full guide, options, and how to use your own prompts:
+**[docs/USAGE.md](docs/USAGE.md)**.
+
+## What has been found so far
 
 - **It works on known cases.** On three models whose hidden target was already known, the tool
   found the right target every time.
@@ -38,11 +50,11 @@ It works even when the model denies everything, it is cheap, and it runs on a no
 - **It is stable.** The result holds up under new prompt wordings, a "stay neutral" instruction, a
   different type of check, a compressed version of the model, and a smaller model.
 - **The signal is real, not a coincidence.** Turning the hidden direction up or down changes the
-  model's behaviour, which shows we found the real thing.
+  model's behaviour, which shows the direction really is the loyalty.
 - **It is not tied to one model brand.** The same method finds a planted preference across six
   different model families.
 
-Full numbers and honest limits are in our paper.
+Full numbers and honest limits are in the paper.
 
 ![Results: the tool finds the right target and rejects a false alarm](images/results.png)
 
@@ -79,7 +91,7 @@ the real hidden target (Trump) instead.*
 
 ## How to use it in your work
 
-Right now the code lets you (a) reproduce every result in our paper, and (b) adapt it to test your
+Right now the code lets you (a) reproduce every result in the paper, and (b) adapt it to test your
 own model against a list of names you choose.
 
 1. Install a CUDA build of PyTorch (see https://pytorch.org), then:
@@ -103,7 +115,7 @@ To try it on **your own** model, open `src/detect.py` and change the model name 
 candidate names near the top. The tool builds a check for each name and reports which one (if any)
 the model hides a loyalty to.
 
-Note: today the code is set up around the models from our study. A simple "scan any model" tool for
+Note: today the code is set up around the models from this study. A simple "scan any model" tool for
 everyday use is the next planned step.
 
 ## What is in this repo
@@ -111,7 +123,7 @@ everyday use is the next planned step.
 The paper's main numbers come from `experiments.py` (16 names, written to
 `results/explore_out/DIGEST.json`). `detect.py` is the shorter scan over 10 names (written to
 `results/detect_results.json`); it reaches the same conclusions on a smaller set. Scripts write
-their output to the current folder; the copies under `results/` are the runs we used.
+their output to the current folder; the copies under `results/` are the runs used for the paper.
 
 ```
 src/
@@ -144,23 +156,23 @@ docs/resources.md              the papers and models used
 
 ## Hardware
 
-Everything runs on a single 6 GB laptop GPU. We used an RTX 4050 (6 GB) for the 7B models and an
-RTX 3060 (6 GB) for the smaller model.
+Everything runs on a single 6 GB laptop GPU. Results were produced on an RTX 4050 (6 GB) for the
+7B models and an RTX 3060 (6 GB) for the smaller model.
 
 ## References
 
 The main papers this work builds on (full list of papers and models in `docs/resources.md`):
 
 - Lamerton and Roger (2026). *Narrow Secret Loyalty Dodges Black-Box Audits.* arXiv:2605.06846.
-  The models we study, and the result that asking the model fails.
+  The models studied here, and the result that asking the model fails.
 - Kwon et al. (2026). *A research agenda for secret loyalties.* Formation Research. The question
-  we answer (can we read the loyalty's structure from inside the model).
-- MacDiarmid et al. (2024). *Simple Probes Can Catch Sleeper Agents.* The inside-reading method we
-  adapt. https://www.anthropic.com/research/probes-catch-sleeper-agents
+  answered here (can the loyalty's structure be read from inside the model).
+- MacDiarmid et al. (2024). *Simple Probes Can Catch Sleeper Agents.* The inside-reading method adapted here.
+  https://www.anthropic.com/research/probes-catch-sleeper-agents
 - Casper et al. (2024). *Black-Box Access is Insufficient for Rigorous AI Audits.* arXiv:2401.14446.
   Why looking inside the model is needed.
 - Marks et al. (2025). *Auditing Language Models for Hidden Objectives.* arXiv:2503.10965.
-- Karvonen (2025). *Activation probe confounds.* arXiv:2512.15674. Why we guard against false alarms.
+- Karvonen (2025). *Activation probe confounds.* arXiv:2512.15674. Why guarding against false alarms matters.
 - Needham et al. (2025). *LLMs Often Know When They Are Being Evaluated.* arXiv:2505.23836.
 - Davidson, Finnveden and Hadshar (2025). *AI-Enabled Coups.* Forethought. Why this risk matters.
 - Bailey et al. (2025). *High-Stakes Activation Probes.* arXiv:2506.10805.
